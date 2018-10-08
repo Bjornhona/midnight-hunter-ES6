@@ -1,0 +1,345 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #add8e6;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  margin: 30px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---- typography ---- */
+h1 {
+  color: blue;
+  font-size: 36px;
+  margin-top: 0;
+  text-align: center;
+}
+
+h2 {
+  color: blue;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h3 {
+  padding-right: 30px;
+  color: blue;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+/* ---- button ---- */
+
+button.button {
+  background-color: pink;
+  padding: 20px 40px;
+  border-radius: 25px;
+  border: 2px solid fuchsia;
+  color: fuchsia;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 10px;
+  width: 250px;
+}
+
+button.button:hover {
+  background-color: rgb(252, 173, 216);
+}
+
+button.esc {
+  background-color: pink;
+  padding: 7px 10px;
+  border: 2px solid fuchsia;
+  color: fuchsia;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  width: 50px;
+}
+
+button.esc:hover {
+  background-color: rgb(252, 173, 216);
+}
+
+div.button-esc {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ---- start section ---- */
+
+main.start-main {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  border: 10px solid fuchsia;
+}
+
+section.start-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img.start-heart {
+  width: 200px;
+  margin-top: 20px;
+}
+
+/* ---- rules ---- */
+
+main.rules-screen {
+  display: flex;
+  justify-content: center;
+  border: 10px solid fuchsia;
+}
+
+div.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+div.rules {
+  width: 300px; 
+}
+
+div.text {
+  width: 300px;
+}
+
+img.image-border {
+  border: 5px solid fuchsia;
+  height: 225px;
+}
+
+@media (min-width: 768px) {
+
+  main.rules-screen {
+    height: 100vh;
+  }
+
+  div.text-and-rules {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  div.ex-images {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  div.enemies {
+    text-align: center;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  main.rules-screen {
+    height: 100%;
+  }
+
+  div.text-and-rules {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.ex-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  img.image-border {
+    margin: 5px;
+  }
+
+}
+
+/* ---- canvas ---- */
+
+.game {
+  height: 100vh;
+  position: relative;
+}
+
+.canvas {
+  height: calc(100% - 100px);
+}
+
+/* ---- game ---- */
+
+main.game {
+  border: 10px solid fuchsia;
+}
+
+div.lives-images {
+  color: orange;
+  width: 150px;
+}
+
+div.loves-images {
+  color: fuchsia;
+  width: 150px;
+}
+
+div.lives {
+  display: flex;
+  align-items: center;
+}
+
+div.loves {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 768px) {
+
+  header.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: lightpink;
+    border: 2px solid fuchsia;
+    padding: 10px 20px;
+  }
+
+  div.lives-and-loves {
+    display: flex;
+    flex-direction: row;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+  header.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: lightpink;
+    border: 2px solid fuchsia;
+    padding: 10px 20px;
+  }
+
+  div.pause-button {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 50px;
+  }
+
+  div.lives h3 {
+    margin: 5px 0;
+    width: 80px;
+  }
+
+  div.loves h3 {
+    margin: 5px 0;
+    width: 80px;
+  }
+
+  div.lives-images {
+    margin: 5px 0;
+  }
+
+  div.loves-images {
+    margin: 5px 0;
+  }
+}
+
+/* ---- Game Over ---- */
+
+div.game-over {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  border: 10px solid fuchsia;
+}
+
+div.inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+}
+
+img.image-game-over {
+  width: 150px;
+  margin-top: 40px;
+}
+
+/* ---- You Win ---- */
+
+main.you-win-screen {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  border: 10px solid fuchsia;
+}
+
+div.you-win {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+img.love-doves {
+  width: 250px;
+  margin-top: 40px;
+}
+
+/* ---- mobile ---- */
+
+.mobile {
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.up-and-down {
+  display: flex;
+  flex-direction: column;
+}
+
+.left-and-right {
+  display: flex;
+  align-self: flex-end;
+}
+
+.arrows {
+  width: 70px;
+  height: 70px;
+  margin: 3px;
+}
